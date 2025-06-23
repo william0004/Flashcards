@@ -1,15 +1,73 @@
-# Web Development Project 3 - *Flashcards*
+# Web Development Project 2 - *Flashcards*
 
 Submitted by: **Yaowei Lei**
 
 This web app: **This web app is an interactive flashcard game focused on the Mobile Suit Gundam universe. Users can test their knowledge by flipping through a set of trivia cards, each containing a question and answer about Gundam characters, mobile suits, battles, and more. Some cards also feature images for a richer experience. The app includes smooth flip and slide animations, and allows users to navigate through the cards to challenge themselves and learn more about the Gundam series.**
 
-Time spent: **16** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
+- [x] **The app displays the title of the card set, a short description, and the total number of cards**
+  - [x] Title of card set is displayed 
+  - [x] A short description of the card set is displayed 
+  - [x] A list of card pairs is created
+  - [x] The total number of cards in the set is displayed 
+  - [x] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
+- [x] **A single card at a time is displayed**
+  - [x] Only one half of the information pair is displayed at a time
+- [x] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
+  - [x] Clicking on a card flips it over, showing the back with corresponding information 
+  - [x] Clicking on a flipped card again flips it back, showing the front
+- [x] **Clicking on the next button displays a random new card**## Required Features
+
+The following **required** functionality is completed:
+
+- [x] **The app displays the title of the card set, a short description, and the total number of cards**
+  - [x] Title of card set is displayed 
+  - [x] A short description of the card set is displayed 
+  - [x] A list of card pairs is created
+  - [x] The total number of cards in the set is displayed 
+  - [x] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
+- [x] **A single card at a time is displayed**
+  - [x] Only one half of the information pair is displayed at a time
+- [x] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
+  - [x] Clicking on a card flips it over, showing the back with corresponding information 
+  - [x] Clicking on a flipped card again flips it back, showing the front
+- [x] **Clicking on the next button displays a random new card**
+
+The following **optional** features are implemented:
+
+- [x] Cards contain images in addition to or in place of text
+  - [x] Some or all cards have images in place of or in addition to text
+- [x] Cards have different visual styles such as color based on their category
+  - Example categories you can use:
+    - Difficulty: Easy/medium/hard
+    - Subject: Biology/Chemistry/Physics/Earth science
+
+The following **additional** features are implemented:
+
+* [x] Left/Right sliding animation.
+
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented required features:
+
+<img src='https://github.com/william0004/Flashcards/blob/main/public/gif/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ScreenToGif.
+
+
+
+# Web Development Project 3 - *Flashcards*
+
+Time spent: **6** hours spent in total
+
+## Required Features
 
 The following **required** functionality is completed:
 
@@ -23,7 +81,6 @@ The following **required** functionality is completed:
   - Both the next and back buttons should have some visual indication that the user is at the beginning or end of the list (for example, graying out and no longer being available to click), not allowing for wrap-around navigation
 
 The following **optional** features are implemented:
-
 
 - [x] Users can use a shuffle button to randomize the order of the cards
   - Cards should remain in the same sequence (**NOT** randomized) unless the shuffle button is clicked 
