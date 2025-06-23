@@ -13,7 +13,7 @@ const Card = (props) => {
           <p>{props.answer}</p>
         </div>
         <div className='card-img-container'>
-          <img src={props.image} alt="card image" className={`card-img${props.image==null ? ' hide': ''}`} />
+          <img src={props.image} alt="card image" className={`card-img${props.image===null ? ' hide': ''}`} />
         </div>
       </div>
     </div>

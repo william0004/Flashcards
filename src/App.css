@@ -13,16 +13,16 @@
 .header-img {
   width: 100%;
   height: auto;
-  max-width: 500px;
+  max-width: 450px;
   margin: 0 auto;
 }
 
 p {
   justify-self: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333;
   margin: 1rem 0;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .title {
@@ -77,10 +77,77 @@ p {
 
 .cardCount {
   color: #006c81;
-  margin: 2rem 0;
-  font-size: clamp(1rem, 1.5rem, 3vw);
+  margin: 1.5rem 0;
+  font-size: clamp(1rem, 1.2rem, 3vw);
 }
 
+
+.nav-btn {
+  background-color: #006c81;
+  margin: 1rem 1rem;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.5rem, 1rem, 2vw);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  width: 100px;
+}
+
+.nav-btn:hover {
+  background-color: #29a1e6;
+}
+
+.nav-btn:disabled,
+.nav-btn.disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.random-btn {
+  background-color: #ffffff;
+  color: #006c81;
+  border: solid 2px #006c81;
+  padding: 0.4rem 1rem;
+  font-size: clamp(0.5rem, 1rem, 2vw);
+  border-radius: 99rem;
+  cursor: pointer;
+  transition: background-color 1s ease;
+  width: 150px;
+
+  position: absolute;
+  translate: 90px 1rem;
+}
+
+.random-btn.on {
+  background-color: #f94e28;
+  color: #ffffff;
+  border: solid 2px #f94e28;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vh;
+  background-color: #006c81;
+  text-align:center;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.footer p {
+  margin: 0;
+  padding: 0.5rem;
+  color: #ffffff;
+  font-size: clamp(0.5rem, 1rem, 2vw);
+}
+
+
+/************************** Card *************************/
 .flip-card {
   background: transparent;
   perspective: 1000px;
@@ -101,7 +168,7 @@ p {
   margin: 1rem;
   box-shadow: rgb(99, 99, 99) 0px 2px 15px;
   width: 500px;
-  height: 280px;;
+  height: 260px;;
 }
 
 .flip-card-inner:hover {
@@ -156,38 +223,96 @@ p {
   display: none;
 }
 
-button {
-  background-color: #006c81;
-  margin: 1rem 1rem;
-  color: white;
-  border: none;
+
+/************************* Guess *************************/
+.guess-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.guess-container h2 {
+  font-size: clamp(1rem, 1.2rem, 3vw);
+  color: #006c81;
+  margin-right: 1rem;
+}
+
+.guess-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: clamp(0.5rem, 1rem, 2vw);
+}
+
+.guess-input.input-wrong {
+  border: 2px solid #f94e28;
+  background-color: #f8d9d2;
+}
+
+.guess-input.input-correct {
+  border: 2px solid #28f990;
+  background-color: #d9f8d2;
+}
+
+.guess-button {
+  background-color: #ffffff;
+  color: #006c81;
+  border: solid 2px #006c81;
   padding: 0.5rem 1rem;
   font-size: clamp(0.5rem, 1rem, 2vw);
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: background-color 0.5s ease;
-  width: 100px;
+  margin-left: 1rem;
 }
 
-button:hover {
-  background-color: #29a1e6;
+.guess-button:hover, .random-btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
+.streak {
+  position: absolute;
+  left: 50%;
+  translate: 24rem -200px;
+}
+
+/************************* Modal *************************/
+.modal-container {
   position: fixed;
-  bottom: 0;
-  width: 100vh;
-  background-color: #006c81;
-  text-align:center;
+  top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
 }
 
-.footer p {
-  margin: 0;
-  padding: 0.5rem;
-  color: #ffffff;
-  font-size: clamp(0.5rem, 1rem, 2vw);
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgb(99, 99, 99) 0px 2px 15px;
+  max-width: 350px;
+  width: 100%;
 }
 
+.modal-icon {
+  width: 80px;
+  height: 80px;
+  margin: 1rem;
+}
+
+/************************* Streak *************************/
+
+.streak-container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-evenly;
+  height: 200px;
+}
